@@ -1,0 +1,13 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.PreconditionTest
+description: Test.
+preconditions:
+- org.openrewrite.maven.search.FindDependency:
+    groupId: jakarta.activation
+    artifactId: jakarta.activation-api
+recipeList:
+- org.openrewrite.java.dependencies.AddDependency:
+    groupId: org.springframework.boot
+    artifactId: spring-boot-starter-flyway
+    version: 4.0.x

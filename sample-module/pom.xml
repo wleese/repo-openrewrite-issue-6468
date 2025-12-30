@@ -9,5 +9,20 @@
       <artifactId>jakarta.activation-api</artifactId>
       <version>2.1.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.openrewrite.recipe</groupId>
+      <artifactId>rewrite-spring</artifactId>
+      <version>6.21.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openrewrite</groupId>
+      <artifactId>rewrite-maven</artifactId>
+      <version>8.70.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openrewrite.recipe</groupId>
+      <artifactId>rewrite-java-dependencies</artifactId>
+      <version>1.48.0</version>
+    </dependency>
   </dependencies>
 </project>
