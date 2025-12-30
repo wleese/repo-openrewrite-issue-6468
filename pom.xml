@@ -10,21 +10,37 @@
   <modules>
     <module>sample-module</module>
   </modules>
-  <dependencies>
-    <dependency>
-      <groupId>org.openrewrite.recipe</groupId>
-      <artifactId>rewrite-spring</artifactId>
-      <version>6.21.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openrewrite</groupId>
-      <artifactId>rewrite-maven</artifactId>
-      <version>8.70.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openrewrite.recipe</groupId>
-      <artifactId>rewrite-java-dependencies</artifactId>
-      <version>1.48.0</version>
-    </dependency>
-  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openrewrite.maven</groupId>
+        <artifactId>rewrite-maven-plugin</artifactId>
+        <configuration>
+          <configLocation>src/main/resources/test.yaml</configLocation>
+          <activeRecipes>
+            <recipe>org.sample.PreconditionTest</recipe>
+          </activeRecipes>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.openrewrite.recipe</groupId>
+            <artifactId>rewrite-spring</artifactId>
+            <version>6.21.0</version>
+          </dependency>
+          <dependency>
+            <groupId>org.openrewrite</groupId>
+            <artifactId>rewrite-maven</artifactId>
+            <version>8.70.2</version>
+          </dependency>
+          <dependency>
+            <groupId>org.openrewrite.recipe</groupId>
+            <artifactId>rewrite-java-dependencies</artifactId>
+            <version>1.48.0</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
