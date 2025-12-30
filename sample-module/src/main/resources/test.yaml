@@ -1,6 +1,6 @@
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: org.openrewrite.PreconditionTest
+name: org.sample.PreconditionTest
 description: Test.
 preconditions:
 - org.openrewrite.maven.search.FindDependency:

@@ -1,8 +1,11 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.sample</groupId>
+    <parent>
+    <groupId>org.sample</groupId>
+    <artifactId>sample</artifactId>
+    <version>${revision}</version>
+  </parent>
   <artifactId>sample-module</artifactId>
-  <version>1.0.0</version>
   <dependencies>
     <dependency>
       <groupId>jakarta.activation</groupId>
