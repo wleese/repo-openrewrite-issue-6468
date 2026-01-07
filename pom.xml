@@ -19,7 +19,7 @@
         <configuration>
           <configLocation>src/main/resources/test.yaml</configLocation>
           <activeRecipes>
-            <recipe>org.sample.PreconditionTest</recipe>
+            <recipe>org.openrewrite.java.spring.boot4.MigrateToModularStartersFlywayDependencyPrecondition</recipe>
           </activeRecipes>
         </configuration>
         <dependencies>
